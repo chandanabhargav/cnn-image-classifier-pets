@@ -27,7 +27,16 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
-## 🔍 Demo
+
+### 🚀 Live Demo
+
+Try the model in your browser:
+
+👉 [**Click here to open the live app**](https://cnn-image-classifier-pets-14.streamlit.app/)
+
+Upload an image of a pet (dog or cat), and the model will predict its breed in real-time.
+
+## 🔍 Project UI
 Upload an image of a pet and the model will predict its breed.
 
 ![App Screenshot](screenshot.png)
