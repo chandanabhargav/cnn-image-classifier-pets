@@ -36,8 +36,7 @@ Try the model in your browser:
 
 Upload an image of a pet (dog or cat), and the model will predict its breed in real-time.
 
-## 🔍 Project UI
-Upload an image of a pet and the model will predict its breed.
+## 🔍 UI
 
 ![App Screenshot](screenshot.png)
 
