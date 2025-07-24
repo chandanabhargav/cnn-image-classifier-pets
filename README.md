@@ -6,7 +6,7 @@ This project is an image classification app that identifies pet breeds from imag
 
 - 🧠 Model: MobileNetV2 (pretrained on ImageNet)
 - 📚 Dataset: 37 dog & cat breeds
-- 🧪 Frameworks: TensorFlow, Streamlit
+- 🧪 Frameworks: TensorFlow, Streamlit, MLflow
 - 🖼️ Input: Any image of a dog or cat
 - 🔍 Output: Predicted breed + confidence score
 
@@ -47,11 +47,11 @@ Upload an image of a pet (dog or cat), and the model will predict its breed in r
 ```
 oxford-pets-classifier/
 │
-├── app.py                 # Streamlit app
-├── pets_model.h5          # Trained model file
-├── requirements.txt       # Dependencies
-├── sample.jpg             # Example input image
-└── README.md              # Project description
+├── app.py                   # Streamlit app
+├── pets_model.h5            # Trained model file
+├── requirements.txt         # Dependencies
+├── train_pets_mlflow_cm.py  # Training script with MLflow tracking
+└── README.md                # Project description
 ```
 
 ## 📚 Model Training Details
@@ -61,6 +61,27 @@ oxford-pets-classifier/
 - Transfer learning with MobileNetV2 + custom dense layers
 - Evaluated using accuracy, classification report, confusion matrix
 - Also attempted fine-tuning the base MobileNetV2 layers, but it did not improve accuracy on the test set. The pretrained features performed better when left frozen.
+
+---
+
+## 🧪 MLflow Integration
+
+This project uses **MLflow** for:
+
+- Automatic experiment tracking (`accuracy`, `loss`, `val_accuracy`, etc.)
+- Saving models as versioned artifacts
+- Logging evaluation metrics like **confusion matrix** and **classification report**
+- Comparing runs with and without fine-tuning
+
+To view experiments:
+
+```bash
+mlflow ui
+```
+
+Then visit: [http://localhost:5000](http://localhost:5000)
+
+---
 
 ## 💡 Notes
 
